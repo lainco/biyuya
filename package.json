@@ -1,0 +1,42 @@
+{
+  "type": "module",
+  "name": "@lainco/biyuya",
+  "version": "0.1.0",
+  "description": "Minimalist node library for working with amounts in diferente currencies at the same time",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/esbuild ./src/index.js --format=esm --bundle --outfile=./dist/index.js --platform=node --target=node16.3 --minify",
+    "publish-major": "npm run build && npm version major && npm publish",
+    "publish-minor": "npm run build && npm version minor && npm publish",
+    "publish-patch": "npm run build && npm version patch && npm publish",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
+  },
+  "files": [
+    "source"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lainco/biyuya.js.git"
+  },
+  "keywords": [
+    "money",
+    "finance",
+    "amount",
+    "quantity"
+  ],
+  "author": "Lainco Software SA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lainco/biyuya.js/issues"
+  },
+  "homepage": "https://github.com/lainco/biyuya.js#readme",
+  "devDependencies": {
+    "esbuild": "^0.14.47",
+    "jest": "^28.1.1",
+    "jest-cli": "^28.1.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
