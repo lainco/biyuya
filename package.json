@@ -2,7 +2,7 @@
   "type": "module",
   "name": "@lainco/biyuya",
   "version": "0.3.0",
-  "description": "Minimalist node library for working with amounts in diferente currencies at the same time",
+  "description": "Minimalist node library for working with amounts in diferent currencies at the same time",
   "main": "./dist/index.js",
   "scripts": {
     "build": "./node_modules/.bin/esbuild ./src/index.js --format=esm --bundle --outfile=./dist/index.js --platform=node --target=node16.3 --minify",
